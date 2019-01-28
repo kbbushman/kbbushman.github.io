@@ -1,0 +1,21 @@
+<% include ../partials/_head %>
+
+<% include ../partials/_header %>
+
+    <main class="container">
+      <h1><%=article.title%></h1>
+      <small>by: <a href="/authors/<%= author._id %>"><%= author.name %></a></small>
+      <section class="mb-4">
+        <%=article.body%>
+      </section>
+      <section>
+          <a class="btn btn-primary mb-3" href="/articles/<%=article._id%>/edit">Edit</a>
+      </section>
+      <section>
+        <form action="/articles/<%=article._id%>?_method=DELETE" method="post">
+            <input class="btn btn-danger" type="submit" value="Delete Article"/>
+        </form>
+      </section>
+    </main>
+
+<% include ../partials/_footer %>

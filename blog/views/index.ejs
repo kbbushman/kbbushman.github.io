@@ -1,0 +1,47 @@
+  <% include partials/_head %>
+
+  <% include partials/_header %> 
+
+  <div class="container text-center">
+    <p class="lead font-weight-bold text-danger"><%= message %></p>
+  </div>
+
+  <main class="container">
+
+    <div class="row mb-5">
+      <div class="col-md-4 offset-sm-0 offset-md-4">
+        <h4>Login</h4>
+        <form action="/auth/login" method="POST">
+          <div class="form-group">
+            <input type="text" name="username" class="form-control" placeholder="Username" required />
+          </div>
+          <div class="form-group">
+            <input type="password" name="password" class="form-control" placeholder="Password" required />
+          </div>
+          <button class="btn btn-primary kennyb float-right" type="submit">Login</button>
+          <a href="#" class="btn btn-secondary float-right mr-3">Cancel</a>
+        </form>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-4 offset-sm-0 offset-md-4">
+        <h4>Registration</h4>
+        <form action="/auth/registration" method="POST">
+          <div class="form-group">
+            <input type="text" name="username" class="form-control" placeholder="Username" required />
+          </div>
+          <div class="form-group">
+            <input type="email" name="email" class="form-control" placeholder="Email" required />
+            </div>
+          <div class="form-group">
+            <input type="password" name="password" class="form-control" placeholder="Password" required />
+          </div>
+          <button class="btn btn-primary kennyb float-right" type="submit">Register</button>
+          <a href="#" class="btn btn-secondary float-right mr-3">Cancel</a>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <% include partials/_footer %> 

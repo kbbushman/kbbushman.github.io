@@ -1,0 +1,16 @@
+<% include ../partials/_head %>
+
+<% include ../partials/_header %>
+
+    <main class="container">
+      <h2>List of Articles</h2>
+      <ul class="list-group">
+        <% for(let i = 0; i < articles.length; i++){ %>
+          <li class="list-group-item">
+            <a href="/articles/<%=articles[i]._id%>"><%=articles[i].title%></a>
+          </li>
+        <% } %>
+      </ul>
+    </main>
+
+  <% include ../partials/_footer %>
